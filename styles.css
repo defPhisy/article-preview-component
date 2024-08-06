@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+/* ---------------Custom CSS Reset---------------- /*
+/* based on Josh Comeau's CSS Reset: https://www.joshwcomeau.com/css/custom-css-reset/ */
+/* and Andy Bell's Modern CSS Reset: https://piccalil.li/blog/a-more-modern-css-reset/  */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+/* -webkit... only for Safari and MacOS with retina display */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ---------------Main Styles---------------- */
+
+:root {
+  --clr-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --clr-desaturated-dark-blue: hsl(214, 17%, 51%);
+  --clr-grayish-blue: hsl(212, 23%, 69%);
+  --clr-light-grayish-blue: hsl(210, 46%, 95%);
+
+  --f-family: "Manrope", sans-serif;
+  --f-w-500: 500;
+  --f-w-700: 700;
+}
+
+body {
+  background-color: var(--clr-light-grayish-blue);
+  font-family: var(--f-family);
+  font-size: calc(15 / 16 * 1rem);
+  font-weight: var(--f-w-500);
+  font-optical-sizing: auto;
+  letter-spacing: 0.01em;
+  display: grid;
+  place-content: center;
+  padding-block: 5rem;
+}
+
+/* ---------------Card---------------- */
+
+.card-container {
+  --border-radius: 0.75rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  max-inline-size: 20rem;
+}
+
+.title-img {
+  object-fit: cover;
+  aspect-ratio: 16/10;
+  object-position: 0 -15px;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.content {
+  background-color: white;
+  padding-inline: 2.2rem;
+}
+
+.title {
+  font-size: 0.95rem;
+  font-weight: var(--f-w-700);
+  line-height: 1.5;
+  color: var(--clr-very-dark-grayish-blue);
+  margin-block-start: 2.5rem;
+  margin-block-end: 1rem;
+}
+
+.text {
+  color: var(--clr-desaturated-dark-blue);
+  font-size: 0.79rem;
+  line-height: 1.6;
+  margin-block-end: 1rem;
+}
+
+.footer {
+  background-color: white;
+  width: 100%;
+  padding-inline: 2.2rem;
+  padding-block: 0.75rem;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user {
+  --img-diameter: 2.5rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: var(--img-diameter) auto;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "img name"
+    "img date";
+  column-gap: 1rem;
+  font-size: 0.75rem;
+}
+
+.user-img {
+  grid-area: img;
+  border-radius: 50%;
+  height: var(--img-diameter);
+}
+
+.user-name {
+  grid-area: name;
+  align-self: end;
+  font-weight: var(--f-w-700);
+  color: var(--clr-very-dark-grayish-blue);
+  letter-spacing: 0.05em;
+}
+
+.user-date {
+  grid-area: date;
+  align-self: start;
+  color: var(--clr-grayish-blue);
+}
+
+.share-button {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: var(--clr-light-grayish-blue);
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------------Toggle Mobile Share-------------- */
+
+.toggle-clr {
+  background-color: var(--clr-desaturated-dark-blue);
+  color: white;
+}
+
+.toggle-bg-clr {
+  background-color: var(--clr-very-dark-grayish-blue);
+}
+
+.share-icons {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.share-icons span {
+  font-size: 0.75rem;
+  color: var(--clr-grayish-blue);
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}

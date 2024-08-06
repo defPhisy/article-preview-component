@@ -1,36 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="./share-btn.js"></script>
+  <script src="https://kit.fontawesome.com/f26c72a963.js" crossorigin="anonymous"></script>
+
   <title>Frontend Mentor | Article preview component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <main>
+    <div class="card-container">
 
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
+      <img class="title-img" src="./images/drawers.jpg" alt="green drawer with decoration">
 
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
+      <div class="content">
+        <h1 class="title">
+          Shift the overall look and feel by adding these wonderful
+          touches to furniture in your home
+        </h1>
+        <p class="text">
+          Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I’ve got some simple tips
+          to help you make any room feel complete.
+        </p>
+      </div>
 
-  Michelle Appleton
-  28 Jun 2020
+      <div class="footer" id="footer">
 
-  Share
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <div class="user share-toggle">
+          <img class="user-img" src="./images/avatar-michelle.jpg" alt="">
+          <p class="user-name" id="name">Michelle Appleton</p>
+          <p class="user-date">28 Jun 2020</p>
+        </div>
+
+        <div class="share-icons share-toggle hidden">
+          <span>Share</span>
+          <div class="icons">
+            <i class="fa-brands fa-square-facebook" title="Facebook"></i>
+            <i class="fa-brands fa-square-twitter" title="Twitter"></i>
+            <i class="fa-brands fa-square-pinterest" title="Pinterest"></i>
+          </div>
+        </div>
+
+        <button class="share-button" id="share-button">
+          <i class="fa-solid fa-share" title="Share"></i>
+        </button>
+      </div>
+
+      <!-- <div class="share hidden" id="share">
+        <span>Share</span>
+        <div class="share-icons hidden">
+          <i class="fa-brands fa-square-facebook" title="Facebook"></i>
+          <i class="fa-brands fa-square-twitter" title="Twitter"></i>
+          <i class="fa-brands fa-square-pinterest" title="Pinterest"></i>
+        </div> -->
+    </div>
+
+    </div>
+  </main>
 </body>
+
 </html>
